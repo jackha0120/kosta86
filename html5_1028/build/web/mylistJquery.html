@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="EUC-KR">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script>
+            // 브라우저가 시작될 때 모든 resource(image, video, dom....)
+            // 등의 보든 자원을 읽을 때 까지 기다린다.
+//            window.onload = function() {
+//
+//            }
+            // dom만 기다리다가 실행됨.
+            $(document).ready(function() {
+                // Element, id, class로 선택자를 사용할 수 있다
+                // css('스타일','값')- 체이닝 방식!
+                // $('Element') -> 3개, 집합요소 (NodeList) 
+                // 체이닝방식은 이 요소가
+                $('div').css('width', '300px').css('height', '100px')
+                        .css('background', 'pink').css('marginTop', '30px');
+                // map방식은 가속성이 뛰어나게 만들어 주기 위해서 사용
+                $('#p1').css({'color': 'red', 'fontSize': '30pt',
+                    'width': '600px', 'border': '1px solid pink',
+                    'textAlign': 'center'})
+                // $('.c1')
+                $('.c1').css({'color': 'blue', 'fontSize': '20pt',
+                    'width': '400px', 'border': '3px solid black',
+                    'textAlign': 'center'})
+                // $(s1,s2,,,) 선택자를 나열한 집합요소
+                // div와 span의 텍스트를 바꿔준다.
+                $('div, span').text('ㅋㅋㅋㅋㅋㅋ');
+            });
+        </script>
+    </head>
+    <body>
+        <div>TODO write content</div>
+        <div>TODO write content</div>
+        <div>TODO write content</div>
+        <div>TODO write content</div>
+        <p id="p1">TODO write content</p>
+        <span class="c1">TODO write content</span>
+        <p class="c1">TODO write content</p>
+    </body>
+</html>

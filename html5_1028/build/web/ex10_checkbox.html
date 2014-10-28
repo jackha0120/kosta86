@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="EUC-KR">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $("#selectBtn").click(function() {
+                    var checkedList = "";
+                    var checkedConsole = "";
+
+                    // input의 name이 hobby중에서 checked에 check가 된 요소
+                    $("input[name='hobby']:checkbox:checked").each(
+                            function() {
+                                // 선택자의 이전 선택자 : prev(), next()
+                                checkedList += $(this).prev().text() + "\n";
+                                // input의 value값을 가져오는 함수 : val()
+                                checkedConsole += $(this).val() + "\n";
+                            });
+
+                    $('#contents').html(checkedList);
+                    console.log(checkedConsole);
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div>
+            <span>음악감상</span>
+            <input type="checkbox" name="hobby" id="music">
+        </div>
+        <div>
+            <span>독서</span>
+            <input type="checkbox" name="hobby" id="book">
+        </div>
+        <div>
+            <span>축구</span>
+            <input type="checkbox" name="hobby" id="soccer">
+        </div>
+        <div>
+            <span>농구</span>
+            <input type="checkbox" name="hobby" id="basketball">
+        </div>
+        <div>
+            <span>낚시</span>
+            <input type="checkbox" name="hobby" id="fishing">
+        </div>
+        <div>
+            <input type="button" id="selectBtn" value="취미 선택">
+        </div>
+        <div id="contents" style="width: 100%; background: yellow ">Result!!</div>
+    </body>
+</html>

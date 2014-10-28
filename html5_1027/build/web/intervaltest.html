@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="EUC-KR">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style> div{ width: 300px; height: 300px; margin: auto} </style>
+        <script>
+            // window.onload --> 브라우저가 시작시에 모든 자원을 다 읽고 난 뒤에 발생하는 이벤트
+            // = function(){} // 익명 함수 표현식(콜백 메서드) ";" , 변수에 저장될  수 있다.
+            window.onload = function() { test(); };
+            // 자바 스크립트 1차우너 배열
+            var array = ["red", "ble", "pink", "yellow", "green","white","black","gray"];
+            var n = 0;
+            function test() {
+                // setInterval(fn,지연시간); // 1초씩 fn함수를 호출하라
+                var inter = setInterval(function() {
+                    document.getElementById("res").style.background = array[n];
+                    if (n == array.length - 1) n = 0;
+                    document.getElementById("res").innerHTML = n++;
+                }, 1000);
+            }
+        </script>
+    </head>
+    <body>
+        <div id="res">TODO write content</div>
+    </body>
+</html>

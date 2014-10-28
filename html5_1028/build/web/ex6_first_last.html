@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="EUC-KR">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            table{ table-layout: auto; width: 75%}
+            td{ color: blue; font-weight: bold}
+            .selectedstyle{
+                color: red; font-size: 20pt;
+                background-color: pink;
+            }
+        </style>
+        <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                var $first = $('tr:first');
+                var $last = $('tr:last');
+                $first.addClass('selectedstyle');
+                $last.addClass('selectedstyle');
+
+            });
+        </script>
+    </head>
+    <body>
+        <table>
+            <tr><td>one</td></tr>
+            <tr><td>two</td></tr>
+            <tr><td>three</td></tr>
+            <tr><td>four</td></tr>
+            <tr><td>five</td></tr>
+        </table>
+    </body>
+</html>
