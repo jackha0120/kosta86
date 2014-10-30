@@ -16,7 +16,7 @@ and open the template in the editor.
                $('img').attr({'width':'100px','border':'5px solid red'});
                // 동적으로 다른 이미지를 교체!
                $('img').attr('title',function (index){
-                   return index + '번의 타이틀은'+ this.title+'입니다';
+                   return index + '번의 타이틀은'+ this.src+'입니다';
                    
                });
                $('button').click(function (){
