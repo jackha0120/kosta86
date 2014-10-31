@@ -28,13 +28,15 @@
                 var $content = $(".faq > div");
                 $content.hide();
                 $trigger.click(function() {
-                    var $this = $(this).parent(); //?
-                    $trigger.parent().removeClass("on"); //?
+                    var $this = $(this).parent();
+                    $trigger.parent().removeClass("on");
                     $content.slideUp(150);
+                    //여기서 next()는 h4다음의 div를 가르킴
                     if ($this.next().is(":hidden")) {
-                        $trigger.each(function(i) {
+                        console.log($this.next().html());
+                        $trigger.each(function() {
                             $this.addClass("on");
-                            $this.next().eq(i).slideDown(150);
+                            $this.next().slideDown(150);
                         });
                     }
                 });

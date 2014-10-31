@@ -24,10 +24,13 @@ function sendRequest(url, param, callback, method, async) {
     xhr.onreadystatechange = callback; // 서버의 응답이 도착하는 함수 지정
     // method : get방식 post방식, url은 get일경우와 post일 경우 
     // async : 비동기식과 동기식 방식을 정하는것.
+    // xhr.open이 불려지기 전상태가 0 번 상태
+    // xhr.open 이 불려지고 나서가 1 번 상태
     xhr.open(method, url, async); // 요청정보 지정
     // 응답을 받을때Header값을 Content-Type를 설정
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     // 서버 요청 보내기
     // Post방식일 경우.
     xhr.send((method == "POST") ? param : null);
+    // 클라이언트가 request를 보냈는데 아직 응답이 없을 경우가 2 번 상태
 }

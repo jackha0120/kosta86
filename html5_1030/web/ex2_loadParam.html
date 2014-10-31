@@ -1,0 +1,45 @@
+<!-- 
+    Document   : ex2_loadParam
+    Created on : 2014. 10. 30, 오전 11:25:25
+    Author     : kosta
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="EUC-KR">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                var $menu = $('.menu > input');
+                $menu.click(function() {
+                    // 서버로 보내기 위한 버튼의 value
+                    var $val = $(this).val();
+                    console.log('클릭한 값 : ' + $val);
+                    // 서버로 데이터를 get방식으로 전송 후 callback받기
+                    $('#new-project').load('ex2_loadData?num=' + $val + " li",
+                            function(resp, status, xhr) {
+                                console.log('resp:' + resp);
+                                console.log('status:' + status);
+                                console.log('xhr:' + xhr.statusText); // OK
+                                if (status == "error") {
+                                    var msg = "페이지 오류";
+                                    $('#error').html(msg + "," + xhr.status + "," + xhr.statusText);
+                                }
+                            });
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div class="menu">
+            <input type="button" value="Click1">
+            <input type="button" value="Click2">
+        </div>
+        <b>Project : </b>
+        <ol id="new-project"></ol>
+        <div id="error"></div>
+    </body>
+</html>

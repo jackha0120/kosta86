@@ -33,6 +33,9 @@
                 sendRequest("Ex1_Serve", param, res, "post", true);
             }
             function  res() {
+                // readyState == 4 : 서버에서 응답한 데이터를 클라이언트가 다 받았을때.
+                // 3 : 수신중
+                //  xhr.status == 200
                 if (xhr.readyState == 4 && xhr.status == 200) {
 //                    alert(xhr.responseText)
                     console.log("----------------" + xhr.status)
