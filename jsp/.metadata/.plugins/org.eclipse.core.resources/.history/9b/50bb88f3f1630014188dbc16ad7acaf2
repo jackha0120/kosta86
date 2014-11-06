@@ -1,0 +1,12 @@
+package dao;
+
+public class LoginDao {
+	private static LoginDao dao;
+	
+	public synchronized static LoginDao getDao(){
+		if (dao != null) dao = new LoginDao();
+		return dao;
+	}
+	public boolean checkLogin(Lo)
+
+}

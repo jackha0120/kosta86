@@ -1,0 +1,15 @@
+INDEX VERSION 1.127
+C:\kosta86\jsp\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1561322298.index
+\jsp_1105_myBatis\src
+C:\kosta86\jsp\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3554911294.index
+\jsp_1105_myBatis\src
+C:\kosta86\jsp\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1279024129.index
+\jsp_1104\src
+C:\kosta86\jsp\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2235151083.index
+\bootstrap\src
+C:\kosta86\jsp\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\118058749.index
+\jsp_1103\src
+C:\kosta86\jsp\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\950318478.index
+\jsp_1103\src
+C:\kosta86\jsp\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2644663392.index
+\jsp_1106_JQmobile1\src

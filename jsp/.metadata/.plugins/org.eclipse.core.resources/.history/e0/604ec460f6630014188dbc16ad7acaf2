@@ -1,0 +1,74 @@
+package dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+import com.sun.javafx.collections.MappingChange.Map;
+
+import vo.MjoinVO;
+import conn.ConnUtil;
+
+public class JoinDao {
+	private static JoinDao dao;
+
+	// 싱글 톤 패턴 ! - 하나만 생성해서 사용 (제한된 리소스를 사용될 때)
+	public synchronized static JoinDao getDao() {
+		if (dao == null)
+			dao = new JoinDao();
+		return dao;
+	}
+
+	public boolean addJoin(MjoinVO vo) {
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		
+		StringBuffer sql = new StringBuffer();
+		sql.append("insert into mjoin values(mjoin_seq.nextVal,");
+		sql.append("?,?,?,?,sysdate)");
+		try {
+			con = ConnUtil.getDs();
+			pstmt = con.prepareStatement(sql.toString());
+			pstmt.setString(1, vo.getId());
+			pstmt.setString(2, vo.getPwd());
+			pstmt.setString(3, vo.getName());
+			pstmt.setString(4, vo.getInfo());
+			pstmt.executeUpdate();
+			return true; // 정상적으로 입력 완료ㅕ
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			//e.printStackTrace();
+			return false; // 비정상적일 경우 false
+		} finally {
+			try {
+				if (pstmt != null)
+					pstmt.close();
+				if (con != null)
+					con.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+
+			}
+		}
+	}
+	// 로그인 메서드 - 데이터베이스로 연결 해서 구현
+	public String login(Map<String, String> info){
+		return "";
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+}

@@ -1,0 +1,64 @@
+package dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import conn.ConnUtil;
+import vo.LoginVO;
+
+public class LoginDao {
+	private static LoginDao dao;
+
+	public synchronized static LoginDao getDao() {
+		if (dao != null)
+			dao = new LoginDao();
+		return dao;
+	}
+
+	public boolean checkLogin(LoginVO vo) {
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		StringBuffer sql = new StringBuffer();
+		int cnt = 0;
+		sql.append("select count(*) cnt from mjoin ");
+		sql.append(" where id = ? and pwd = ?");
+
+		try {
+			con = ConnUtil.getDs();
+			pstmt = con.prepareStatement(sql.toString());
+			pstmt.setString(1, vo.getId());
+			pstmt.setString(2, vo.getPwd());
+			rs = pstmt.executeQuery();
+			if (rs.next()) {
+				cnt = rs.getInt("cnt");
+			}
+			if (cnt > 0) {
+				System.out.print("Log In Sucess");
+			} else {
+				System.out.print("Log In Fail");
+			}
+			return true;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return false;
+		}finally {
+			try {
+				if (pstmt != null)
+					pstmt.close();
+				if (con != null)
+					con.close();
+				if (rs != null)
+					rs.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+
+			}
+		}
+
+	}
+
+}
