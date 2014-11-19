@@ -1,0 +1,18 @@
+package ex1;
+
+import org.springframework.aop.framework.ProxyFactoryBean;
+
+public class MessageMain {
+	public static void main(String[] args) {
+		// AOP ProxyFactortyBean
+		ProxyFactoryBean pfBean = new ProxyFactoryBean();
+		// Target
+		MessageImple target = new MessageImple();
+		pfBean.setTarget(target);
+		
+		// Advice
+		MessageAdvice advice = new MessageAdvice();
+		pfBean.addAdvice(advice);
+	}
+
+}

@@ -1,0 +1,29 @@
+package ex1;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+
+public class TBoardDao implements Service {
+	@Autowired
+	private JdbcTemplate JdbcTemplate;
+
+	@Override
+	public void add(TBoardVO vo) {
+		StringBuffer sql = new StringBuffer();
+		sql.append("insert into upform ");
+		sql.append(" values(upform_seq.nextVal,?,?,?,?,?,sysdate)");
+		Object[] param = { vo.getSub(), vo.getWriter(), vo.getContent(),
+				vo.getPwd(), vo.getImg() };
+		JdbcTemplate.update(sql.toString(), param);
+		System.out.println("Insert OK!!");
+	}
+
+	@Override
+	public List<TBoardVO> getList() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

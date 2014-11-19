@@ -1,0 +1,47 @@
+<!-- 
+    Document   : ex1_effect
+    Created on : 2014. 10. 29, 오전 11:15:15
+    Author     : kosta
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="EUC-KR">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <style>
+            #btn{width: 200px; margin: auto; background: pink; text-align: center}
+            #target{width: 200px; height: 200px; margin: auto; background: gray;}
+        </style>
+        <script>
+            $(document).ready(function() {
+                // toggle하면서 이벤트를 발생할 콜백함수를 설정 - 기본
+                $('#btn').toggle(function() {
+                    //  $('#target').hide() //숨김
+                    // fadein, fadeout 해보기
+//                    $('#target').slideUp(2000);
+                    $('#target').fadeOut('slow');
+
+                }, function() {
+                    // $('#target').show(); //보임
+                    $('#target').fadeIn('slow', function() {
+                        $(this).css('background', 'blue').css('color', 'white');
+                    });
+                });
+                $('#btn2').toggle(function() {
+                    $(this).next().fadeOut();
+                }, function() {
+                    $(this).next().fadeIn();
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div id="btn">click</div>
+        <div id="target">^^ 하하 나의 이펙트!!!</div>
+        <div id="btn2">Click2</div>
+        <div id="target2">^^ 하하 나의 이펙트!!!</div>
+    </body>
+</html>

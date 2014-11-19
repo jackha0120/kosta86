@@ -1,0 +1,17 @@
+
+11월 13, 2014 12:18:34.85 NEW SESSION
+11월 13, 2014 12:18:34.85 1415848714826	addons.update-checker	WARN	Update manifest for {972ce4c6-7e08-4474-a285-3208198ce6fd} did not contain an updates property
+11월 13, 2014 12:18:35.31 1415848715316	addons.update-checker	WARN	Update manifest for {0AB9084F-0EF8-499a-A461-DE46D3C4A45B} did not contain an updates property
+
+11월 17, 2014 14:11:36.64 NEW SESSION
+11월 17, 2014 14:11:36.64 1416201096622	addons.update-checker	WARN	Update manifest for {972ce4c6-7e08-4474-a285-3208198ce6fd} did not contain an updates property
+11월 17, 2014 14:11:37.05 1416201097053	addons.update-checker	WARN	Update manifest for {0AB9084F-0EF8-499a-A461-DE46D3C4A45B} did not contain an updates property
+11월 17, 2014 16:51:15.75 1416210675751	GMPInstallManager.simpleCheckAndInstall	INFO	Last check was: 1416210676 seconds ago, minimum seconds: 86400
+11월 17, 2014 16:51:15.77 1416210675752	GMPInstallManager._getURL	INFO	Using url: https://aus4.mozilla.org/update/3/GMP/%VERSION%/%BUILD_ID%/%BUILD_TARGET%/%LOCALE%/%CHANNEL%/%OS_VERSION%/%DISTRIBUTION%/%DISTRIBUTION_VERSION%/update.xml
+11월 17, 2014 16:51:15.77 1416210675754	GMPInstallManager._getURL	INFO	Using url (with replacement): https://aus4.mozilla.org/update/3/GMP/33.0.3/20141105223254/WINNT_x86-msvc/en-US/release/Windows_NT%206.1.1.0%20(x64)/default/default/update.xml
+11월 17, 2014 16:51:15.77 1416210675756	GMPInstallManager.checkForAddons	INFO	sending request to: https://aus4.mozilla.org/update/3/GMP/33.0.3/20141105223254/WINNT_x86-msvc/en-US/release/Windows_NT%206.1.1.0%20(x64)/default/default/update.xml
+11월 17, 2014 16:51:16.38 1416210676388	GMPInstallManager.onLoadXML	INFO	request completed downloading document
+11월 17, 2014 16:51:16.39 1416210676390	GMPInstallManager.onLoadXML	INFO	allowNonBuiltIn: false
+11월 17, 2014 16:51:16.40 1416210676408	GMPInstallManager.simpleCheckAndInstall	INFO	Found 1 addons advertised.
+11월 17, 2014 16:51:16.41 1416210676408	GMPInstallManager.simpleCheckAndInstall	INFO	Found addon: gmp-gmpopenh264 (isValid: true, isInstalled: false, isOpenH264: true, hashFunction: sha512, hashValue: e12ae17e53649353665adfd6bafe7da2ae8f16e460e567fda99b1a221d5ddda9f1ba054876f1e1deb654ffcf1ee0f9cdae1f84bbaf02e163778fafaef6fd62c8, size: 269943)
+11월 17, 2014 16:51:17.27 1416210677273	GMPInstallManager.simpleCheckAndInstall	INFO	Addon installed successfully: gmp-gmpopenh264 (isValid: true, isInstalled: true, isOpenH264: true, hashFunction: sha512, hashValue: e12ae17e53649353665adfd6bafe7da2ae8f16e460e567fda99b1a221d5ddda9f1ba054876f1e1deb654ffcf1ee0f9cdae1f84bbaf02e163778fafaef6fd62c8, size: 269943)

@@ -1,0 +1,22 @@
+package ex1;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
+
+@Controller
+public class TBoardController {
+	@RequestMapping(value = "/save.kosta", method = RequestMethod.POST)
+	// @ModelAttribute - tvo가 ModelAndView의 addObject됨
+	public ModelAndView save(@ModelAttribute("tvo") TBoardVO tvo) {
+		System.out.println("TVO:sub " + tvo.getSub());
+		System.out.println("TVO:Writer " + tvo.getWriter());
+		System.out.println("TVO:Content " + tvo.getContent());
+		System.out.println("TVO:Pwd " + tvo.getPwd());
+		System.out.println("TVO:Img");
+		// Dao에 연결을 할 수 도 있고, 가공!!
+		return new ModelAndView("success");
+	}
+}

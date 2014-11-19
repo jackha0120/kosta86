@@ -1,0 +1,21 @@
+package ex2;
+
+public class ServiceImple implements Service {
+	private String msg;
+
+	public public ServiceImple() {
+		System.out.println("생성자 호출");
+	}
+
+	@Override
+	public void init() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void destroy() {
+		// TODO Auto-generated method stub
+
+	}
+}

@@ -1,0 +1,30 @@
+package ex1;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
+
+@Aspect
+public class AfterAdvice {
+	@Autowired
+	private SimpleDateFormat f;
+	@Autowired
+	private Date d;
+
+	@Before("execution(* *.Today*.todate*(..))")
+	public void afterReturnMethod(JoinPoint jp) {
+		HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder
+				.currentRequestAttributes()).getRequest();
+
+		request.setAttribute("msg", f.format(d));
+
+	}
+}

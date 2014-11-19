@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+이름 : <input type="text" name="name">
+제품명 : <input type="text" name="ordName">
+제품 개수 : <input type="number" name="quant">
+가격 : <input type="number" name="price">
+<input type="button" value="Click">
+</body>
+</html>

@@ -1,0 +1,5 @@
+package spring1113;
+
+public class AutoWiredService {
+
+}

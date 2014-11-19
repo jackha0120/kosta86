@@ -1,0 +1,15 @@
+package ex1;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class Today {
+	private SimpleDateFormat f;
+	private Date d;
+	public static void main(String[] args) {
+		
+		d = Date();
+		System.out.println(d);
+	}
+
+}

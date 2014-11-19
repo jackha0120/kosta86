@@ -1,0 +1,21 @@
+INDEX VERSION 1.127
+C:\kosta86\spring\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\932333334.index
+\spring1112\src
+C:\kosta86\spring\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1125187124.index
+\spring1119\src
+C:\kosta86\spring\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1937000759.index
+\spring1117\src
+C:\kosta86\spring\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2939236358.index
+\spring1117\src
+C:\kosta86\spring\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1074566630.index
+\spring1111\src
+C:\kosta86\spring\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3718623095.index
+\spring1118\src
+C:\kosta86\spring\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3405131107.index
+\JSP_1107\src
+C:\kosta86\spring\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4013704890.index
+\study1117\src
+C:\kosta86\spring\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\555782362.index
+\spring1117\src
+C:\kosta86\spring\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3258293011.index
+\spring1118\src

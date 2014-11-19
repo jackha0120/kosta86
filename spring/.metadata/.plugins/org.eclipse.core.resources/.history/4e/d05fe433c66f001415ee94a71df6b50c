@@ -1,0 +1,49 @@
+package ex1;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
+
+public class TBoardDao implements Service {
+	@Autowired
+	private JdbcTemplate JdbcTemplate;
+
+	@Override
+	public void add(TBoardVO vo) {
+		StringBuffer sql = new StringBuffer();
+		sql.append("insert into upform ");
+		sql.append(" values(upform_seq.nextVal,?,?,?,?,?,sysdate)");
+		Object[] param = { vo.getSub(), vo.getWriter(), vo.getContent(),
+				vo.getPwd(), vo.getImg() };
+		JdbcTemplate.update(sql.toString(), param);
+		System.out.println("Insert OK!!");
+	}
+
+	@Override
+	public List<TBoardVO> getList() {
+		StringBuffer sql = new StringBuffer();
+		sql.append(" select num, sub, writer, content, pwd, img, rdate ");
+		sql.append(" order by 1 desc ");
+		List<TBoardVO> list = JdbcTemplate.query(sql.toString(),
+				new RowMapper<TBoardVO>() {
+
+					@Override
+					public TBoardVO mapRow(ResultSet rs, int arg1)
+							throws SQLException {
+						TBoardVO vo = new TBoardVO();
+						vo.setNum(rs.getInt("num"));
+						vo.setSub(rs.getString("sub"));
+						vo.setWriter(rs.getString("writer"));
+						vo.setContent(rs.getString("content"));
+						vo.setPwd(rs.getString("pwd"));
+						vo.setImg(rs.getString("img"));
+						return vo;
+					}
+				});
+		return null;
+	}
+}

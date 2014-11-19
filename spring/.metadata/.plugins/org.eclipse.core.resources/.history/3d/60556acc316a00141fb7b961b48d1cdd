@@ -1,0 +1,6 @@
+package ex1;
+
+public interface SetInter {
+	public Set<Integer> getSet();
+
+}

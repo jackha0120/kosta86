@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>index</title>
+</head>
+<body>
+<ul>
+<li><a href="form.kosta">form Example1</a></li>
+<li><a href="upform.kosta">upform Example1</a></li>
+</ul>
+
+</body>
+</html>

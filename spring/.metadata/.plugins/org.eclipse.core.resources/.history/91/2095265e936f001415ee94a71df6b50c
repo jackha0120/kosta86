@@ -1,0 +1,18 @@
+package ex1;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
+
+@Aspect
+public class AfterAdvice {
+	@Before("execute(* *.Today*.toda*(..))")
+public void afterReturnMethod(JoinPoint jp){
+		HttpServletRequest request = ((ServletRequestAttributes)RequestContextHolder.currentRequestAttributes());
+	
+}
+}

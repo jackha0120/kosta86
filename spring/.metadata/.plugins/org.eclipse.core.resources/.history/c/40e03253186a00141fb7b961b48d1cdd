@@ -1,0 +1,19 @@
+package ex1;
+
+public class MapType {
+	private int loc1, loc2, loc3;
+
+	public void setLoc1(int loc1) {
+		this.loc1 = loc1;
+	}
+
+	public void setLoc2(int loc2) {
+		this.loc2 = loc2;
+	}
+
+	public void setLoc3(int loc3) {
+		this.loc3 = loc3;
+	}
+	
+
+}

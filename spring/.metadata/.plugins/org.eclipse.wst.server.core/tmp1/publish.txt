@@ -1,0 +1,4 @@
+#Tomcat publish data
+#Wed Nov 19 17:43:23 KST 2014
+org.eclipse.jst.jee.server\:spring1119=C\:\\kosta86\\spring\\service\\sts-bundle\\pivotal-tc-server-developer-3.0.0.RELEASE\\base-instance\\wtpwebapps\\spring1119
+org.eclipse.jst.jee.server\:/binary\:C\:\\kosta86\\spring\\workspace\\spring1119\\WebContent\\WEB-INF\\lib\\spring-web-4.1.1.RELEASE.jar=C\:\\kosta86\\spring\\service\\sts-bundle\\pivotal-tc-server-developer-3.0.0.RELEASE\\base-instance\\wtpwebapps\\spring1119\\WEB-INF\\lib\\spring-web-4.1.1.RELEASE.jar

@@ -1,0 +1,36 @@
+package ex1;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class Today {
+	private SimpleDateFormat f;
+	private Date d;
+
+	public static void main(String[] args) {
+//		SimpleDateFormat f = new SimpleDateFormat("yyyy-MM-dd");
+//		Date d = new Date();
+		f = new SimpleDateFormat();
+		f = setF(new SimpleDateFormat());
+		d = new Date();
+		
+		System.out.println(f.format(d));
+	}
+
+	public SimpleDateFormat getF() {
+		return f;
+	}
+
+	public void setF(SimpleDateFormat f) {
+		this.f = f;
+	}
+
+	public Date getD() {
+		return d;
+	}
+
+	public void setD(Date d) {
+		this.d = d;
+	}
+
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>playform.html</title>
+<style>
+	#wrap {width: 300px; margin: auto;}
+</style>
+</head>
+<body>
+	<div id="wrap">
+		<form method="post" action="playadd.jsp">
+			PName : <input type="text" name="pname"> <br />
+			Price : <input type="number" name="price" min="1000"
+			step="1000"
+			><br />
+			Users : <input type="text" name="users"><br />
+			<input type="submit" value="send" >
+		</form>
+
+	</div>
+</body>
+</html>

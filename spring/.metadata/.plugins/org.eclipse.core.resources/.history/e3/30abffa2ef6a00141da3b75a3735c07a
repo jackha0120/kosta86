@@ -1,0 +1,16 @@
+package ex2;
+
+public class ServiceImple implements Service{
+
+	@Override
+	public void init() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void destroy() {
+		// TODO Auto-generated method stub
+		
+	}
+}

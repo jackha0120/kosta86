@@ -1,0 +1,15 @@
+package ex2;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.GenericXmlApplicationContext;
+
+public class MyBeanMain {
+	public static void main(String[] args) {
+		ApplicationContext ctx = new GenericXmlApplicationContext(
+				"ex2/mybean.xml");
+		MyBean bean = ctx.getBean("targetBean", MyBean.class);
+		String v = bean.myGetMessage("나의 핵심 로직!");
+		System.out.println(v);
+	}
+
+}
