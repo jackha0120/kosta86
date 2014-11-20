@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.1.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.1.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.1.xsd">
+	<context:annotation-config></context:annotation-config>
+	<bean id="viewResolver"
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/jsp/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+
+	<!-- DataSource -->
+	<bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
+		<property name="jndiName" value="java:comp/env/jdbc/myora"></property>
+	</bean>
+	<!-- MyBatis설정 -->
+	<bean id="factoryBean" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="mapperLocations" value="classpath*:mapper/*.xml"></property>
+	</bean>
+
+	<!-- SqlsessionTemplate -->
+	<bean id="template" class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg ref="factoryBean" />
+	</bean>
+
+	<!-- Dao -->
+	<bean id="bbs1dao" class="dao.Bbs1Dao" />
+
+	<!-- multipartResolver : CommonsMultipartResolver를 등록해서 파일 업로드 처리 -->
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver"></bean>
+
+	<!-- Controller -->
+	<bean name="/index.kosta"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="index"></bean>
+	<bean name="/bbs1form.kosta"
+		class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+		p:viewName="bbs1Form"></bean>
+	<bean id="bbs1ActionController" class="controller.Bbs1ActionController"></bean>
+</beans>
+
+
+
+
+
+
+
+
